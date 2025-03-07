@@ -1,0 +1,47 @@
+# Este es un ejemplo de código Python para probar el analizador léxico.
+def factorial(n):
+    # Calcula el factorial de un número.
+    if n < 0:
+        return None  # No definido para números negativos.
+    elif n == 0:
+        return 1
+    else:
+        result = 1
+        for i in range(1, n + 1):
+            result *= i  # Multiplicación acumulada.
+        return result
+
+def operaciones_basicas(a, b):
+    # Realiza varias operaciones aritméticas.
+    suma = a + b
+    resta = a - b
+    multiplicacion = a * b
+    division = a / b if b != 0 else None
+    modulo = a % b if b != 0 else None
+    potencia = a ** b
+    return suma, resta, multiplicacion, division, modulo, potencia
+
+def main():
+    numero = 5
+    fact = factorial(numero)
+    print("El factorial de", numero, "es", fact)
+    
+    a = 10
+    b = 3.5
+    opers = operaciones_basicas(a, b)
+    print("Suma:", opers[0])
+    print("Resta:", opers[1])
+    print("Multiplicación:", opers[2])
+    print("División:", opers[3])
+    print("Módulo:", opers[4])
+    print("Potencia:", opers[5])
+    
+    # Uso de algunas palabras reservadas adicionales
+    if fact and fact > 100:
+        print("Resultado mayor a 100")
+    else:
+        print("Resultado menor o igual a 100")
+
+if __name__ == "__main__":
+    main()
+
